@@ -24,14 +24,14 @@
         LOADING!!!
       </div>
       <div id="searchResult" v-bind:key="image.id" v-for="image in images">
-        <div id="image-part">
-          <img v-bind:src="image.src.tiny" alt="picture 1" />
-          <div id="router">
-            <router-link :to="{ name: 'view', params: { id: image.id } }">
+        <router-link :to="{ name: 'view', params: { id: image.id } }">
+          <div id="image-part">
+            <img v-bind:src="image.src.tiny" alt="picture 1" />
+            <div id="router">
               View
-            </router-link>
+            </div>
           </div>
-        </div>
+        </router-link>
         <p>Photographer: {{ image.photographer }}</p>
       </div>
     </div>
@@ -145,11 +145,12 @@ export default {
     display: flex;
     flex-direction: column;
     position: relative;
+    justify-content: center;
+    align-items: center;
 
     #router {
       position: absolute;
       width: 60%;
-      left: 10%;
       bottom: 10%;
       border-radius: 5px;
       opacity: 0;

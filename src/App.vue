@@ -1,8 +1,18 @@
 <template>
   <div class="" id="app">
+    <Description />
     <router-view />
   </div>
 </template>
+<script>
+// @ is an alias to /src
+import Description from "@/components/Description.vue";
+export default {
+  components: {
+    Description
+  }
+};
+</script>
 
 <style lang="scss">
 #app {

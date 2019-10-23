@@ -51,11 +51,20 @@ export default {
 #wrapper {
   margin: 50px 100px;
 
+  @media only screen and (max-width: 960px) {
+    margin: 20px;
+  }
+
   img {
     position: relative;
     width: 80%;
     height: 80vh;
     justify-content: center;
+
+    @media only screen and (max-width: 960px) {
+      width: 100%;
+      height: 50vh;
+    }
   }
 
   #imageDetails {
@@ -71,10 +80,19 @@ export default {
       color: #fff;
       padding: 10px;
 
+      @media only screen and (max-width: 960px) {
+        width: 50%;
+      }
+
       &:hover {
         transform: scale(1.1);
         text-decoration: none;
       }
+    }
+
+    @media only screen and (max-width: 960px) {
+      width: 100%;
+      left: 0%;
     }
 
     background: #fff;
